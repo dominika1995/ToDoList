@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
    $('.list__items').on("click","li", function(){
        if($(this).find('.list__items--text').css("text-decoration")[0]=="n"){
            $(this).find('.list__items--text').css("text-decoration","line-through");
@@ -25,8 +23,4 @@ $(document).ready(function() {
                 '</span><span class="list__items--text">'+text+'</span></li>')
         }
     });
-
-
-
-
 });
