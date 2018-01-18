@@ -8,9 +8,9 @@ body{
   border: 2px solid lightgrey;
   background-color: white;
   position: absolute;
-  top:50%;
+  margin-top: 10%;
   left:50%;
-  transform: translate(-50%,50%);
+  transform: translate(-50%);
   width: 300px;
 
   &__header{
@@ -70,7 +70,7 @@ body{
       position: absolute;
       top:50%;
       left: 8%;
-      transform: translate(-20%,-50%);
+      transform: translate(-7%,-50%);
     }
 
     li:hover > .list__items--trash{
