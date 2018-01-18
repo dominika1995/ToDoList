@@ -35,7 +35,13 @@ body{
     border: none;
     padding: 2% 0 2% 5%;
     background-color: lightgrey;
+    height:60px;
+    font-size: 15px;
 
+    &:focus {
+      border: 2px solid #1B98FF;
+      width: 93.6%;
+    }
   }
 
   &__items{
