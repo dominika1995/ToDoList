@@ -19,13 +19,11 @@ body{
     background-color: #1B98FF;
     color: white;
 
-
     .fa{
       float: right;
       padding-top: 1%;
       color: white;
     }
-
   }
 
   &__input{
@@ -71,6 +69,7 @@ body{
         transform: translate(-50%,-50%);
       }
     }
+
     &--text{
       display: inline-block;
       position: absolute;
@@ -98,7 +97,6 @@ body{
       animation-duration: 1s;
     }
   }
-
 }
 
 @keyframes show {
