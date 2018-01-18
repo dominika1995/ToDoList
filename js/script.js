@@ -7,6 +7,7 @@ $(document).ready(function() {
            $(this).find('.list__items--text').css("text-decoration","none");
        }
    });
+
    
    $(".list__items").on("click",".list__items--trash",function (event) {
        $(this).parent(".list__item").fadeOut(500,function () {
