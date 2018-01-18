@@ -1,0 +1,112 @@
+body{
+  background: linear-gradient(to right,#1B98FF,#d3d3d3);
+  position: relative;
+  font-family: Calibri;
+}
+
+.list{
+  border: 2px solid lightgrey;
+  background-color: white;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,50%);
+  width: 300px;
+
+  &__header{
+    padding: 2% 5%;
+    margin: 0;
+    background-color: #1B98FF;
+    color: white;
+
+
+    .fa{
+      float: right;
+      padding-top: 1%;
+      color: white;
+    }
+
+  }
+
+  &__input{
+    width: 95%;
+    outline: none;
+    margin: 0;
+    border: none;
+    padding: 2% 0 2% 5%;
+    background-color: lightgrey;
+
+  }
+
+  &__items{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+      height: 50px;
+      position: relative;
+    }
+    li:nth-child(even){
+      background-color: lightgrey;
+    }
+
+    &--trash{
+      height: 100%;
+      width: 50px;
+      position: relative;
+      display: none;
+      color: white;
+
+      .fa{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+    &--text{
+      display: inline-block;
+      position: absolute;
+      top:50%;
+      left: 8%;
+      transform: translate(-20%,-50%);
+    }
+
+    li:hover > .list__items--trash{
+      display: inline-block;
+      visibility: unset;
+      background-color: #FF4D4D;
+      animation-name: show;
+      animation-duration: 1s;
+
+      .fa{
+        animation-name: showTrash;
+        animation-duration: 1s;
+      }
+    }
+
+    li:hover > .list__items--text{
+      left: 20%;
+      animation-name: showText;
+      animation-duration: 1s;
+    }
+  }
+
+}
+
+@keyframes show {
+  from {width: 0;}
+  to {width:50px;}
+}
+
+@keyframes showText {
+  from {left: 8%;}
+  to {left:20%;}
+}
+
+@keyframes showTrash {
+  0% {opacity: 0;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
