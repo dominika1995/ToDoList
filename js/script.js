@@ -7,7 +7,6 @@ $(document).ready(function() {
            $(this).find('.list__items--text').css("text-decoration","none");
        }
    });
-
    
    $(".list__items").on("click",".list__items--trash",function (event) {
        $(this).parent(".list__item").fadeOut(500,function () {
@@ -24,4 +23,18 @@ $(document).ready(function() {
                 '</span><span class="list__items--text">'+text+'</span></li>')
         }
     });
+
+    $('.fa-plus').on("click",function(){
+        if($('.list__input').css("display")==="none"){
+            $('.list__input').fadeIn(500,function(){
+                $(this).css("display","block");
+            })
+        }
+        else {
+            $('.list__input').fadeOut(500,function(){
+                $(this).css("display", "none");
+            })
+        }
+    });
+
 });
